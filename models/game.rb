@@ -7,7 +7,22 @@ class Game
     @choice2 = choice2.downcase
   end
 
+  def computer_player
+    num = rand(0..2)
+    if num == 1 
+      @choice2 = "rock"
+    elsif num == 2
+      @choice2 = "paper"
+    else
+      @choice2 = "scissors"
+    end
+  end
+
   def play()
+    if @choice2 == "computer"
+      computer_player
+    end
+
     if @choice1 == "rock" && @choice2 == "scissors"
       return "Rock wins"
     elsif @choice1 == "scissors" && @choice2 == "rock"
@@ -29,12 +44,11 @@ class Game
 
 end
 
-game1 = Game.new("Rock", "Scissors")
-puts game1.play
+
+  game1 = Game.new("scissors", "computer")
+  puts game1.play
 
 
-  
-nil
 
 #original effort
     #   if (@choice1 || @choice2 == "rock") && (@choice1 || @choice2 == "scissors")

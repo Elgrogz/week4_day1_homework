@@ -1,5 +1,21 @@
 body {
-  background-color: blue;
+  background-color: SpringGreen;
+  text-align: center;
   font-color: green;
   font-family: Verdana
 }
+
+.game {
+  font-size: 20px;
+  color: DarkSlateGrey;
+}
+
+#pics {
+  display: inline-block;
+}
+
+img {
+  height: 400px;
+  width: 300px;
+}
+
